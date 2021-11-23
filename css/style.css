@@ -2,4 +2,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightgreen;
+}
+
+#container {
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(80% / 5);
+    height: calc(100% / 8);
+    background-color: green;
+    border-radius: 30px;
+}
+
+.card i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card span{
+    text-transform: uppercase;
 }
