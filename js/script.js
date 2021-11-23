@@ -178,9 +178,17 @@ function addCard (iCard) {
     const container = document.getElementById('container');
     container.innerHTML +=            
        `
-       <div class="card ${iCard.color}">
-            <i class="${(iCard.family + ' ' + iCard.prefix + iCard.name)}"></i>
+       <div class="card">
+            <i style="color: ${get_random_color()}" class="${(iCard.family + ' ' + iCard.prefix + iCard.name)}"></i>
             <span>${iCard.name}</span>
         </div> `;
 }
 
+
+function get_random_color() {
+	function c() {
+		let hex = Math.floor(Math.random() * 256).toString(16);
+		return ("0" + String(hex)).substr(-2);
+	} 
+	return "#" + c() + c() + c();
+}
