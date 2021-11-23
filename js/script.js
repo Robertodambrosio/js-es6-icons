@@ -134,4 +134,17 @@ function addCard (iCard) {
             <span>${iCard.name}</span>
         </div> `
 
+    colorIcon(iCard);
+}
+
+function color() {
+const colorIcon = card.forEach((element) => {
+    if(element.color == "blue") {
+        element.style.color = 'blue';
+    } else if(element.color == "orange") {
+        element.style.color = 'orange';
+    } else {
+        element.style.color = 'green';
+    }
+})
 }
