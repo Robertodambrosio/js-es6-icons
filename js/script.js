@@ -1,4 +1,4 @@
-[
+const card = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -113,3 +113,25 @@
 	}
 ];
 
+
+constructCard();
+
+
+
+function constructCard () {
+    for(let i = 0; i < card.length; i++) {
+        addCard(card[i])
+    }
+}
+
+//========================== creazione della card dinamica 
+function addCard (iCard) {
+    const container = document.getElementById('container');
+    container.innerHTML +=            
+       `
+       <div class="card">
+            <i class="${(iCard.family + ' ' + iCard.prefix + iCard.name)}"></i>
+            <span>${iCard.name}</span>
+        </div> `
+
+}

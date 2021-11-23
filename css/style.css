@@ -19,10 +19,11 @@ header {
 
 #container {
     width: 90%;
-    height: 100%;
-    margin: 20px auto;
+    height: 90%;
+    margin: 0px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -31,14 +32,14 @@ header {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: calc(80% / 5);
+    width: calc((100% / 5) - 30px);
     height: calc(100% / 8);
     background-color: green;
     border-radius: 30px;
 }
 
 .card i{
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
