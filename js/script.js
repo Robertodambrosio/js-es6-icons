@@ -134,7 +134,7 @@ function addCard (iCard) {
             <span>${iCard.name}</span>
         </div> `
 
-    colorIcon(iCard);
+    color();
 }
 
 function color() {
@@ -148,3 +148,4 @@ const colorIcon = card.forEach((element) => {
     }
 })
 }
+
