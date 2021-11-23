@@ -34,7 +34,7 @@ header {
     justify-content: center;
     width: calc((100% / 5) - 30px);
     height: calc(100% / 8);
-    background-color: green;
+    background-color: lightgreen;
     border-radius: 30px;
 }
 
@@ -45,4 +45,11 @@ header {
 
 .card span{
     text-transform: uppercase;
+}
+
+.none {
+    display: none;
+}
+.block {
+    display: block;
 }

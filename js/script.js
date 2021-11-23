@@ -113,9 +113,24 @@ const card = [
 	}
 ];
 
+    const argSelected = document.getElementById('opt');
 
-constructCard();
+    constructCard();
 
+    switch (argSelected) {
+        case 1:
+          if (card.type = 'animals')
+            classList.add('block')  
+        break;
+        case 2:
+            if (card.type = 'vegetables')
+            classList.add('block')
+        break;
+        case 3:
+            if (card.type = 'user')
+            classList.add('block')
+        break;
+    }
 
 
 function constructCard () {
@@ -130,22 +145,8 @@ function addCard (iCard) {
     container.innerHTML +=            
        `
        <div class="card">
-            <i class="${(iCard.family + ' ' + iCard.prefix + iCard.name)}"></i>
+            <i class="${(iCard.family + ' ' + iCard.prefix + iCard.name)}"  style= "color: ${iCard.color}"></i>
             <span>${iCard.name}</span>
-        </div> `
-
-    color();
-}
-
-function color() {
-const colorIcon = card.forEach((element) => {
-    if(element.color == "blue") {
-        element.style.color = 'blue';
-    } else if(element.color == "orange") {
-        element.style.color = 'orange';
-    } else {
-        element.style.color = 'green';
-    }
-})
+        </div> `;
 }
 
