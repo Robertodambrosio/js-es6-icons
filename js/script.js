@@ -113,33 +113,73 @@ const card = [
 	}
 ];
 
-    const argSelected = document.getElementById('opt');
+let valore = 1;
+riempimento('All');
 
-    constructCard();
+document.getElementById('opt').addEventListener('change', function (){
+	valore = parseInt(this.value);
+    playFunction();
+});
 
 
+function playFunction() {
 
+    document.getElementById('container').innerHTML = "";
 
-
-function constructCard () {
-    for(let i = 0; i < card.length; i++) {
-        addCard(card[i])
-
-        if (argSelected.value == card[i].type){
-        
-        } else if (argSelected.value == 'All') {
-            
-        }
+    switch(valore) {
+        case 1:
+            riempimento('All');
+        break;
+        case 2:
+            riempimento('Animals');
+        break;
+        case 3:
+            riempimento('Vegetables');
+        break;
+        case 4:
+            riempimento('User');
     }
 }
 
+
+
+function riempimento(element) {
+	console.log(valore);
+    if (element == 'All') {
+        for (let i = 0; i < card.length; i++) {
+            addCard(card[i]);
+        }
+		
+    } else if (element == 'Animals') {
+        for (let i = 0; i < card.length; i++) {
+            if (card[i].type == 'animal') {
+                addCard(card[i]);
+            }
+        }
+    } else if (element == 'Vegetables') {
+        for (let i = 0; i < card.length; i++) {
+            if (card[i].type == 'vegetable') {
+                addCard(card[i]);
+            }
+        }
+
+    } else if (element == 'User') {
+        for (let i = 0; i < card.length; i++) {
+            if (card[i].type == 'user') {
+                addCard(card[i]);
+            }
+        }
+
+}
+
+}
 //========================== creazione della card dinamica 
 function addCard (iCard) {
     const container = document.getElementById('container');
     container.innerHTML +=            
        `
-       <div class="card">
-            <i class="${(iCard.family + ' ' + iCard.prefix + iCard.name)}"  style= "color: ${iCard.color}"></i>
+       <div class="card ${iCard.color}">
+            <i class="${(iCard.family + ' ' + iCard.prefix + iCard.name)}"></i>
             <span>${iCard.name}</span>
         </div> `;
 }

@@ -47,9 +47,14 @@ header {
     text-transform: uppercase;
 }
 
-.none {
-    display: none;
+.blue {
+    color: blue;
 }
-.block {
-    display: block;
+
+.orange {
+    color: orange
 }
+
+.green {
+    color: green;
+} 
