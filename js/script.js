@@ -117,25 +117,19 @@ const card = [
 
     constructCard();
 
-    switch (argSelected) {
-        case 1:
-          if (card.type = 'animals')
-            classList.add('block')  
-        break;
-        case 2:
-            if (card.type = 'vegetables')
-            classList.add('block')
-        break;
-        case 3:
-            if (card.type = 'user')
-            classList.add('block')
-        break;
-    }
+
+
 
 
 function constructCard () {
     for(let i = 0; i < card.length; i++) {
         addCard(card[i])
+
+        if (argSelected.value == card[i].type){
+        
+        } else if (argSelected.value == 'All') {
+            
+        }
     }
 }
 
